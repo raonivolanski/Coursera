@@ -19,7 +19,11 @@ for iter = 1:num_iters
 
 
 
-
+h = X*theta;
+errors = h-y;
+gradient = X'*errors;
+theta_change = (1/m)*alpha*gradient;
+theta = theta - theta_change;
 
 
 
